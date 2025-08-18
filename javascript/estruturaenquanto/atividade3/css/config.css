@@ -7,7 +7,7 @@ section{
 
 /*Configuração da página*/
 
-.cadsoma{
+.cadinteiro{
 
     width: 300px;
     margin: 0px auto;
@@ -15,14 +15,14 @@ section{
     margin-bottom: 10px;
 }
 
-.cadsoma input{
+.cadinteiro input{
 
     margin: 5px auto;
     width: 100%;
     padding: 5px 0;
 }
 
-.cadsoma button{
+.cadinteiro button{
 
     width: 30%;
     margin: 0 10%;
