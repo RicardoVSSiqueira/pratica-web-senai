@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade final desenvolvimento web</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    </head>
+    <body>
+
+        
+        <header>
+            
+            <h1>DevRicardo</h1>
+
+            <nav class="navegaçao">
+
+                <ul class="menu">
+                    <li><a href="index.html" class="menu-link">Inicio</a></li>
+                    <li><a href="estruturaCond.html" class="menu-link">Estruturas Condicionais</a></li>
+                    <li><a href="estruturaRep.html" class="menu-link">Estruturas de Repetição</a></li>
+                    <li><a href="vetores.html" class="menu-link">Vetores</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+           
+            <section id="sobre" class="sobre">
+                <h2 class="sobre-SeTitulo">ESTRUTURA CASO: Atividade2</h2>
+
+                <div class="caixa-conteudo">
+                <div class="caixaSe">
+                    <h3> Desenvolva uma aplicação web que peça ao usuario para digitar DOIS números quaisquer em seguida
+                        pergunte qual a operação deseja realizar, exiba mensagem da operação escolhida os números
+                        digitados e o resultado da operação. Se o resultado é par ou impar.</h3>
+                       
+                </div>
+                
+                <textarea name="fonte" cols="90" rows="20">
+
+                    <html>
+    <body>
+       
+        <!DOCTYPE html>
+        <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <title>Estrutura CASO JavaScript - Atividade 1</title>
+                <link rel="stylesheet" type="text/css" href="css/config.css">
+                <script src="js/valproc.js"></script>
+                <style>
+
+                    /*configurações gerais*/
+
+section{
+
+    margin-top: 0px auto;
+}
+
+/*Configuração da página*/
+
+.cadcalculo{
+
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadcalculo input{
+
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadcalculo button{
+
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+
+    float: left;
+}
+
+h2{
+
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+                </style>
+            </head>
+            <body>
+                <section>
+               
+                    <h2>Estrutura Caso (Switch() - Atividade 2)</h2>
+                    <font face="arial">
+        
+                        <form name="frmcalculo" action="#" method="get" onsubmit="return procFormulario()">
+        
+                            <fieldset class="cadcalculo">
+        
+                                <legend>Entrada de Dados</legend>
+                                <br>
+                                <label for="num1">Informe o primeiro número:</label>
+                                <input type="text" name="txtnum1" id="num1">
+                                <br><br>
+                                <label for="num2">Informe o segundo número:</label>
+                                <input type="text" name="txtnum2" id="num2">
+                                <br><br>
+                                <label for="operacao">Informe a operação Desejada? (1 = +); (2 = -); (3 = *); (4 = /)</label>
+                                <input for="text" name="txtopera" id="operacao">
+                                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+        
+                            </fieldset>
+        
+                        </form>
+        
+                    </font>                    
+                        
+                </section>
+            </body>
+        </html>
+
+        <script type="text/javascript">
+           
+             
+           function procFormulario(){
+
+if(document.frmcalculo.txtnum1.value==""){
+
+    alert("Preencha o campo primeiro número");
+    document.frmcalculo.txtnum1.focus();
+    return false;
+    }else if(document.frmcalculo.txtnum2.value==""){
+
+        alert("Preencha o campo segundo número");
+        document.frmcalculo.txtnum2.focus();
+        return false;
+
+        }else if(document.frmcalculo.txtopera.value==""){
+
+            alert("Preencha a operação que deseja?");
+            document.frmcalculo.txtopera.focus();
+            return false;    
+            }else{
+
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let operacao = parseFloat(document.getElementById('operacao').value);
+                
+                switch(operacao){
+
+                    case 1:
+                            resultado = num1 + num2;
+                            alert("Soma = "+ resultado);
+                    break
+                    case 2:
+                            resultado = num1 - num2;
+                            alert("Subtração = "+ resultado);
+                    break
+                    case 3:
+                            resultado = num1 * num2;
+                            alert("Multiplicação = "+ resultado)
+                    break
+                    case 4:
+                            if(num2 == 0){
+
+                                alert("Erro");
+                                break;
+                            }
+                            resultado = num1 / num2;
+                            alert("Divisão = "+ resultado)
+                    break
+                    default:
+                            ("Operação Invalida");
+                            
+                }
+
+                if(resultado % 2 == 0){
+
+                    alert("Par");
+
+                    }else{
+
+                        alert("Impar");
+                    }
+            }
+
+}       
+
+        </script>
+
+    </body>
+    </html>
+
+                </textarea>
+                
+                </div>
+                
+                <a href="iframeCaso2.html"><button class="btn-gerar" >Gerar Código</button></a>
+                
+
+            </section>
+            
+        </main>
+
+    </body>
+</html>

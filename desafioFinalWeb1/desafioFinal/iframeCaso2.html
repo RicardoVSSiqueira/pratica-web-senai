@@ -1,0 +1,164 @@
+<html>
+    <body>
+       
+        <!DOCTYPE html>
+        <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <title>Estrutura CASO JavaScript - Atividade 1</title>
+                <link rel="stylesheet" type="text/css" href="css/config.css">
+                <script src="js/valproc.js"></script>
+                <style>
+
+                    /*configurações gerais*/
+
+section{
+
+    margin-top: 0px auto;
+}
+
+/*Configuração da página*/
+
+.cadcalculo{
+
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadcalculo input{
+
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadcalculo button{
+
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+
+    float: left;
+}
+
+h2{
+
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+                </style>
+            </head>
+            <body>
+                <section>
+               
+                    <h2>Estrutura Caso (Switch() - Atividade 2)</h2>
+                    <font face="arial">
+        
+                        <form name="frmcalculo" action="#" method="get" onsubmit="return procFormulario()">
+        
+                            <fieldset class="cadcalculo">
+        
+                                <legend>Entrada de Dados</legend>
+                                <br>
+                                <label for="num1">Informe o primeiro número:</label>
+                                <input type="text" name="txtnum1" id="num1">
+                                <br><br>
+                                <label for="num2">Informe o segundo número:</label>
+                                <input type="text" name="txtnum2" id="num2">
+                                <br><br>
+                                <label for="operacao">Informe a operação Desejada? (1 = +); (2 = -); (3 = *); (4 = /)</label>
+                                <input for="text" name="txtopera" id="operacao">
+                                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+        
+                            </fieldset>
+        
+                        </form>
+        
+                    </font>                    
+                        
+                </section>
+            </body>
+        </html>
+
+        <script type="text/javascript">
+           
+             
+           function procFormulario(){
+
+if(document.frmcalculo.txtnum1.value==""){
+
+    alert("Preencha o campo primeiro número");
+    document.frmcalculo.txtnum1.focus();
+    return false;
+    }else if(document.frmcalculo.txtnum2.value==""){
+
+        alert("Preencha o campo segundo número");
+        document.frmcalculo.txtnum2.focus();
+        return false;
+
+        }else if(document.frmcalculo.txtopera.value==""){
+
+            alert("Preencha a operação que deseja?");
+            document.frmcalculo.txtopera.focus();
+            return false;    
+            }else{
+
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let operacao = parseFloat(document.getElementById('operacao').value);
+                
+                switch(operacao){
+
+                    case 1:
+                            resultado = num1 + num2;
+                            alert("Soma = "+ resultado);
+                    break
+                    case 2:
+                            resultado = num1 - num2;
+                            alert("Subtração = "+ resultado);
+                    break
+                    case 3:
+                            resultado = num1 * num2;
+                            alert("Multiplicação = "+ resultado)
+                    break
+                    case 4:
+                            if(num2 == 0){
+
+                                alert("Erro");
+                                break;
+                            }
+                            resultado = num1 / num2;
+                            alert("Divisão = "+ resultado)
+                    break
+                    default:
+                            ("Operação Invalida");
+                            
+                }
+
+                if(resultado % 2 == 0){
+
+                    alert("Par");
+
+                    }else{
+
+                        alert("Impar");
+                    }
+            }
+
+
+}       
+
+        </script>
+
+    </body>
+    </html>

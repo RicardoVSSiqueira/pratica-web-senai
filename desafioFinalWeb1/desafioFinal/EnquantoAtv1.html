@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade final desenvolvimento web</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    </head>
+    <body>
+
+        
+        <header>
+            
+            <h1>DevRicardo</h1>
+
+            <nav class="navegaçao">
+
+                <ul class="menu">
+                    <li><a href="index.html" class="menu-link">Inicio</a></li>
+                    <li><a href="estruturaCond.html" class="menu-link">Estruturas Condicionais</a></li>
+                    <li><a href="estruturaRep.html" class="menu-link">Estruturas de Repetição</a></li>
+                    <li><a href="vetoresUniBi.html" class="menu-link">Vetores</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+           
+            <section id="sobre" class="sobre">
+                <h2 class="sobre-SeTitulo">ESTRUTURA ENQUANTO: Atividade1</h2>
+
+                <div class="caixa-conteudo">
+                <div class="caixaSe">
+                    <h3>Faça um algoritmo que leia 3 números e imprima seu somatório</h3>
+                       
+                </div>
+                
+                <textarea name="fonte" cols="90" rows="20">
+
+                    <html>
+    <body>
+       
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Repetição - Enquanto()</title>
+    <link rel="stylesheet" type="text/css" href="css/config.css">
+    <script src="js/validaproc.js"></script>
+    <style>
+
+        /*configurações gerais*/
+
+section{
+
+    margin-top: 0px auto;
+}
+
+/*Configuração da página*/
+
+.cadinteiro{
+
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadinteiro input{
+
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadinteiro button{
+
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+
+    float: left;
+}
+
+h2{
+
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+    </style>
+
+</head>
+<body>
+    
+        <section>
+
+            <h2>Atividade1 - Somatória de 3 números</h2>
+            <font face = "arial" >
+                
+                <form name="frmnumint" action="#" method="get" onsubmit="return validaproc()">
+                    <fieldset class="cadinteiro">
+
+                        <legend>Entrada de dados</legend>
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+
+
+
+            </font>
+
+        </section>
+</body>
+</html>
+
+        <script type="text/javascript">
+           
+             
+           function validaproc(){
+
+let i=1;
+let soma = 0;
+   
+while(i<=3){
+
+    let num = parseInt(prompt("Digite o número " + i + ":")); 
+    i++;
+    soma+=num;    
+    console.log("O numero informado é : "+num);        
+}
+
+console.log("A somatoria é :"+soma);
+return false;
+}
+            
+        </script>
+
+    </body>
+    </html>
+                </textarea>
+                
+                </div>
+                
+                <a href="EnquantoIframe1.html"><button class="btn-gerar" >Gerar Código</button></a>
+                
+
+            </section>
+            
+        </main>
+
+    </body>
+</html>

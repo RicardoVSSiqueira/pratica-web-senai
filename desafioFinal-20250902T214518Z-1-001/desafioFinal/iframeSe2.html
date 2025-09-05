@@ -1,0 +1,134 @@
+<html>
+    <body>
+       
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        
+            <head>
+        
+                <meta charset="UTF-8">
+                <title>Estrutura SE Javascript</title>
+                <link rel="stylesheet" type="text/css" href="css/config.css">
+                <script src="js/atividade.js"></script>
+                <style>
+
+                    /*configurações gerais*/
+
+section{
+
+margin-top: 0px auto;
+}
+
+/*Configuração da página*/
+
+.compnotas{
+
+width: 300px;
+margin: 0px auto;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.compnotas input{
+
+margin: 5px auto;
+width: 100%;
+padding: 5px 0;
+}
+
+.compnotas button{
+
+width: 30%;
+margin: 0 10%;
+background-color: #b1ccf5;
+font-weight: bold;
+font-size: 16px;
+}
+
+label{
+
+float: left;
+}
+
+h2{
+
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+font-size: 50px;
+}
+                </style>
+            </head>
+            <body>
+        
+                <section>
+        
+                    <h2>Atividade - Comparando números - Estrutura condicional "se"(if)</h2>
+                    <font face="arial">
+        
+                        <form name="frmcompara" action="#" method="get" onsubmit="return procuFormulario()">
+        
+                            <fieldset class="compnotas">
+        
+                                <legend>Entrada de dados</legend>
+                                <br>
+                                <label name="numero1">Numero 1:</label>
+                                <input type="text" name="txtnumero1" id="numero1">
+                                <br><br>
+                                <label name="numero2">Numero 2:</label>
+                                <input type="text" name="txtnumero2" id="numero2">
+                                <br><br>
+                                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </font>
+                </section>
+            </body>   
+        </html>
+
+        <script type="text/javascript">
+           
+             
+           function procuFormulario(){
+
+//validação de campos
+if(document.frmcompara.txtnumero1.value==""){
+
+    alert("Preencha o campo Nota 1");
+    document.frmcompara.txtnumero1.focus();
+    return false; 
+
+}else if(document.frmcompara.txtnumero2.value==""){
+
+        alert("Preencha o campo Nota 2");
+        document.frmcompara.txtnumero2.focus();
+        return false; 
+
+          }else{
+
+                //Processamento do pragarma...
+                let nota1 = parseFloat(document.getElementById('numero1').value);
+                let nota2 = parseFloat(document.getElementById('numero2').value);
+                
+                if (numero1 > numero2) {
+
+                     alert("Número 1 é maior que Número 2.");
+
+                } else if (numero2 > numero1) {
+
+                     alert("Número 2 é maior que Número 1.");
+
+                } else {
+
+                     alert("Número 1 é igual ao Número 2.");
+                    
+                    }
+            
+          }
+            
+}  
+
+        </script>
+
+    </body>
+    </html>

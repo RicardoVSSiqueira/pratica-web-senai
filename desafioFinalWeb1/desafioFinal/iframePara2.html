@@ -1,0 +1,124 @@
+<html>
+    <body>
+       
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2 - Estrutura "para"...(for)</title>
+    <link rel="stylesheet" type="text/css" href="css/config.css">
+    <script src="js/validaproc.js"></script>
+    <style>
+
+        /*configurações gerais*/
+
+section{
+
+    margin-top: 0px auto;
+}
+
+/*Configuração da página*/
+
+.cadtabuada{
+
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadtabuada input{
+
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadtabuada button{
+
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+
+    float: left;
+}
+
+h2{
+
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+    </style>
+
+</head>
+<body>
+    
+    <section>
+
+        <h2>Atividade1 - Tabuada - Estrutura "para...."(for())</h2>
+        <font face = "arial" >
+            
+            <form name="frmtabuada" action="#" method="get" onsubmit="return validaproc()">
+                <fieldset class="cadtabuada">
+
+                    <legend>Entrada de dados</legend>
+                    <br>
+                    <label for="tabuada">Tabuada de:</label>
+                    <input type="text" name="txttabuada" id="tabuada">
+                    <br><br>
+                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+
+
+
+        </font>
+
+    </section>
+</body>
+</html>
+
+        <script type="text/javascript">
+           
+             
+           function validaproc(){
+
+if(document.frmtabuada.txttabuada.value==""){
+
+    alert("Preencha o campo Número");
+    document.frmtabuada.txttabuada.focus();
+    return false;
+
+}else {
+
+    let num=parseInt(document.getElementById('tabuada').value);
+    for(let i = 1; i <+ 11; i++){
+
+        console.log(num + "x" + i + " = " + num * i);
+
+    }
+
+        return false;
+ 
+}
+
+
+
+}
+             
+            
+
+        </script>
+
+    </body>
+    </html>

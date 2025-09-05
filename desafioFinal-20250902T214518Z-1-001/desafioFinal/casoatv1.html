@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade final desenvolvimento web</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    </head>
+    <body>
+
+        
+        <header>
+            
+            <h1>DevRicardo</h1>
+
+            <nav class="navegaçao">
+
+                <ul class="menu">
+                    <li><a href="index.html" class="menu-link">Inicio</a></li>
+                    <li><a href="estruturaCond.html" class="menu-link">Estruturas Condicionais</a></li>
+                    <li><a href="estruturaRep.html" class="menu-link">Estruturas de Repetição</a></li>
+                    <li><a href="vetores.html" class="menu-link">Vetores</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+           
+            <section id="sobre" class="sobre">
+                <h2 class="sobre-SeTitulo">ESTRUTURA CASO: Atividade1</h2>
+
+                <div class="caixa-conteudo">
+                <div class="caixaSe">
+                    <h3>Crie uma função que verifique se um número inteiro foi digitado e, em seguida, classifique-o conforme a faixa etária correspondente</h3>
+                       
+                </div>
+                
+                <textarea name="fonte" cols="90" rows="20">
+
+                    <html>
+                        <body>
+                           
+                            <!DOCTYPE html>
+                            <html lang="pt-br">
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <title>Estrutura CASO JavaScript - Atividade 1</title>
+                                    <link rel="stylesheet" type="text/css" href="css/config.css">
+                                    <script src="js/valproc.js"></script>
+                                    <style>
+                    
+                                        /*configurações gerais*/
+                    
+                    section{
+                    
+                        margin-top: 0px auto;
+                    }
+                    
+                    /*Configuração da página*/
+                    
+                    .cadnumint{
+                    
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .cadnumint input{
+                    
+                        margin: 5px auto;
+                        width: 100%;
+                        padding: 5px 0;
+                    }
+                    
+                    .cadnumint button{
+                    
+                        width: 30%;
+                        margin: 0 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    
+                    label{
+                    
+                        float: left;
+                    }
+                    
+                    h2{
+                    
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    
+                                    </style>
+                                </head>
+                                <body>
+                                    <section>
+                                   
+                                        <h2>Estrutura Caso (Switch() - Atividade 1)</h2>
+                                        <font face="arial">
+                            
+                                            <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                            
+                                                <fieldset class="cadnumint">
+                            
+                                                    <legend>Entrada de Dados</legend>
+                                                    <br>
+                                                    <label for="numint">Informe um número inteiro :</label>
+                                                    <input type="text" name="txtnumint" id="numint">
+                                                    <br><br>
+                                                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                            
+                                                </fieldset>
+                            
+                                            </form>
+                            
+                                        </font>                    
+                                            
+                                    </section>
+                                </body>
+                            </html>
+                    
+                            <script type="text/javascript">
+                               
+                                 
+                               function procFormulario(){
+                    
+                    if(document.frmnumint.txtnumint.value==""){
+                    
+                         alert("Preencha o campo Número inteiro");
+                         document.frmnumint.focus();
+                         return false;
+                    }else{
+                    
+                             let numint=parseInt(document.getElementById('numint').value);/*capturar o que o usuario esta digitando*/
+                             switch(true){
+                                          
+                                     case(numint >=0 && numint <= 3):
+                    
+                                         console.log("Bebê");
+                                         return false;
+                                     break;
+                                     case(numint >= 4 && numint <= 10):
+                    
+                                         console.log("Criança");
+                                         return false;
+                                     break;
+                                     case(numint >= 11 && numint <= 18):
+                    
+                                         console.log("Adolescente");
+                                         return false;
+                                     break;
+                                     default:
+                    
+                                         console.log("Adulto");
+                                         return false;
+                                     
+                                     break;
+                                     /*case 0:
+                                     case 1:
+                                     case 2:
+                                     case 3:
+                                         //alert("Bebê");
+                                         console.log("Bebê");
+                                         return false;
+                                     break;
+                                     case 4:
+                                     case 5:
+                                     case 6:
+                                     case 7:
+                                     case 8:
+                                     case 9:
+                                     case 10:
+                                         //alert("Criança")
+                                         console.log("Criança");
+                                         return false;
+                                     break
+                                     case 11:
+                                     case 12:
+                                     case 13:
+                                     case 14:
+                                     case 15:
+                                     case 16:
+                                     case 17:
+                                     case 18:
+                                         //alert("Adolescente")
+                                         console.log("Adolescente");
+                                         return false;
+                                     break
+                                     default:
+                                         //alert("Adulto")
+                                         console.log("Adulto");
+                                         return false;
+                                     break
+                                         */
+                             }
+                    }
+                    }
+                                         
+                            </script>
+                    
+                        </body>
+                        </html>
+                    
+
+                </textarea>
+                
+                </div>
+                
+                <a href="iframeCaso1.html"><button class="btn-gerar" >Gerar Código</button></a>
+                
+
+            </section>
+            
+        </main>
+
+    </body>
+</html>
