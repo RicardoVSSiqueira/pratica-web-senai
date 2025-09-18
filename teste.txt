@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 teste12345
-=======
-teste123
->>>>>>> 9abc8a7238100b379d7fecaff1f0e5c0b7e82263
